@@ -1,0 +1,39 @@
+Projet SY5 2014-2015
+
+Auteurs: Jordan Downey - Esteban Escandell
+
+I - Les fonctionnalités implementées
+1) Archivage -c
+Le programme permet l'archivage de fichiers avec plusieurs options:
+-f pour archiver dans un fichier au format .mtr
+-s pour archiver les liens symboliques
+-C rep pour archiver le contenu des dossiers comme étant dans un nouveau répertoire rep
+-v pour enregistrer le checksum des fichiers enregistrés
+-z pour faire une compression avec gunzip de l'archive
+
+2) Désarchivage -x
+Le programme permet le désarchivage de fichiers avec plusieurs options:
+-f pour désarchiver à partir d'un fichier au format .mtr
+-s pour désarchiver les éventuels liens symboliques de l'archive
+-C rep pour désarchiver le contenu de l'archive dans un nouveau dossier rep
+-v pour vérifier le checksum des fichiers enregistrés avec ceux nouvellement désarchivé.
+-u pour désarchiver les éléments s'ils sont plus récents que dans le répertoire
+
+3) Ajout à l'archive -a
+Le programme de la même façon que l'archivage peut ajouter des éléments à l'archive.
+-u pour archiver que les éléments plus récents s'ils sont dans l'archive
+Attention les options -C et l'absence de -f ne fonctionnent pas avec -a.
+
+4) Supression de l'archive -d
+Supprime un élément de l'archive en lui donnant son chemin dans l'archive.
+
+5) Exploration de l'archive -l
+Permet d'explorer le contenu d'une archive en affichant la date de modifications, les droits et le chemin du fichier.
+
+6) Protection de l'archive -p
+En mode création l'option -p permet la protection de l'archive avec un calcul de hash avec MD5.
+Lors du désarchivage l'option n'est pas obligatoire mais va vérifier si l'archive est protégée ou non et donc demandera à l'utilisateur le mot de passe.
+
+II - Les fonctionnalités non implémentées
+
+Toutes les fonctionnalités de base et les options suggérées ont toutes été implémentées et doivent fonctionner.
